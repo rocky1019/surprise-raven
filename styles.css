@@ -1,0 +1,63 @@
+/* General Styling */
+* {
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 50px;
+  font-style: italic;
+  color: #ff9a9e;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+  background-size: 300% 300%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00;
+  animation: glitch 0.3s infinite alternate;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 3px 3px 0 #ff0000, -3px -3px 0 #00ff00; }
+  100% { text-shadow: -3px -3px 0 #ff0000, 3px 3px 0 #00ff00; }
+}
+
+/* Bouncing Text */
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Crazy Text (Shaking Effect) */
+.crazy-text {
+  display: inline-block;
+  animation: shake 0.2s infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: rotate(-5deg); }
+  100% { transform: rotate(5deg); }
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: black;
+  color: white;
+}
